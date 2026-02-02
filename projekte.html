@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <title>Hub - Projekte</title>
+    <style>
+        :root { --bg:#0a0a0c; --fg:#ffffff; --muted:#94a3b8; --accent:#00a4ff; --border:rgba(255,255,255,0.1); --font-main: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font-main); background: var(--bg); color: var(--fg); display: flex; flex-direction: column; min-height: 100vh; }
+        nav.sidebar { position: fixed; left: 0; top: 0; bottom: 0; width: 280px; background: #111; z-index: 2000; transform: translate3d(-100%, 0, 0); transition: 0.3s; border-right: 1px solid var(--border); }
+        nav.sidebar.open { transform: translate3d(0, 0, 0); }
+        .side-head { padding: 3rem 1.8rem 1.5rem; }
+        .side-head h2 { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 2px; }
+        .side-nav a { display: block; padding: 0.75rem 1.8rem; color: var(--muted); text-decoration: none; font-size: 0.95rem; line-height: 1.2; }
+        .side-nav a.active { color: var(--accent); background: rgba(0,164,255,0.1); border-radius: 0 50px 50px 0; margin-right: 1rem; font-weight: 700; }
+        
+        .cont { flex: 1; padding: 2rem; max-width: 1100px; margin: 0 auto; width: 100%; }
+        h1 { font-size: 3rem; font-weight: 900; text-align: center; margin-bottom: 3rem; background: linear-gradient(to bottom, #fff, #555); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .project-card { background: #16161a; border-radius: 30px; padding: 2rem; border: 1px solid var(--border); margin-bottom: 2rem; }
+        .project-card h3 { color: var(--accent); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        @media (min-width: 769px) { body { flex-direction: row; } nav.sidebar { position: relative; transform: none; } }
+    </style>
+</head>
+<body>
+    <nav class="sidebar" id="side">
+        <div class="side-head"><h2>Logs</h2></div>
+        <div class="side-nav">
+            <a href="index.html">Startseite</a>
+            <a href="llama.html">Llama3 Chat</a>
+            <a href="news.html">SRF News</a>
+            <a href="projekte.html" class="active">Projekte</a>
+            <a href="opensource.html">Open Source</a>
+            <a href="impressum.html">Impressum</a>
+        </div>
+    </nav>
+    <div class="cont">
+        <h1>Prototypes</h1>
+        <div class="project-card">
+            <h3>Wheatley Animatronic</h3>
+            <p style="color:var(--muted)">Interaktives Auge mit motorisierter Steuerung. Portal 2 Nachbau.</p>
+        </div>
+    </div>
+    <script>function toggle(){document.getElementById('side').classList.toggle('open')}</script>
+</body>
+</html>

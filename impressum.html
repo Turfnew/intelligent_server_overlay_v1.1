@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <title>Hub - Impressum</title>
+    <style>
+        /* CSS Basis von index.html geerbt */
+        :root { --bg:#f8fafc; --fg:#0f172a; --muted:#64748b; --accent:#0ea5b5; --border:rgba(226,232,240,0.8); }
+        body { margin:0; font-family:-apple-system, sans-serif; background:var(--bg); display:flex; flex-direction:column; height:100vh; }
+        .mobile-nav { display:flex; align-items:center; justify-content:space-between; padding:1.2rem 1.5rem; background:white; border-bottom:1px solid var(--border); }
+        nav.sidebar { position:fixed; left:0; top:0; bottom:0; width:280px; background:white; z-index:2000; transform:translate3d(-100%,0,0); transition:0.4s; border-right:1px solid var(--border); }
+        nav.sidebar.open { transform:translate3d(0,0,0); }
+        .side-head { padding:3.5rem 1.8rem 2rem; } .side-head h2 { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.15em; color:var(--muted); margin:0; }
+        .side-nav a { display:block; padding:1rem 1.8rem; color:var(--fg); text-decoration:none; font-weight:500; }
+        .side-nav a.active { color:var(--accent); background:#f0fdfa; font-weight:700; border-radius:0 50px 50px 0; margin-right:1.5rem; }
+        .cont { flex:1; display:flex; align-items:center; justify-content:center; padding:2rem; }
+        .card { background:white; padding:3rem; border-radius:35px; border:1px solid var(--border); max-width:600px; width:100%; }
+        @media (min-width:769px) { body{flex-direction:row;} .mobile-nav{display:none;} nav.sidebar{position:relative; transform:none;} }
+    </style>
+</head>
+<body>
+    <div class="mobile-nav"><span style="font-weight:800">HUB</span><button onclick="toggle()" style="background:var(--fg);color:white;border:none;padding:0.6rem 1.2rem;border-radius:12px;">MENÜ</button></div>
+    <nav class="sidebar" id="side">
+        <div class="side-head"><h2>Navigation</h2></div>
+        <div class="side-nav">
+            <a href="index.html">Startseite</a>
+            <a href="llama.html">Llama3 Chat</a>
+            <a href="news.html">SRF News</a>
+            <a href="projekte.html">Projekte</a>
+            <a href="opensource.html">Open Source</a>
+            <a href="impressum.html" class="active">Impressum</a>
+        </div>
+    </nav>
+    <div class="cont">
+        <div class="card">
+            <h1 style="margin:0 0 1rem; font-size:2.5rem; letter-spacing:-1.5px;">Impressum</h1>
+            <p style="color:var(--muted); line-height:1.7;">Betreiber dieser privaten Seite:<br>Jonathan M.<br>Schweiz</p>
+        </div>
+    </div>
+    <script>function toggle(){document.getElementById('side').classList.toggle('open')}</script>
+</body>
+</html>
